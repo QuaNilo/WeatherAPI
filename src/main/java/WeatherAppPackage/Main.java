@@ -1,6 +1,8 @@
 package WeatherAppPackage;
 import FrameWeatherAPP.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JLabel;
 
@@ -12,32 +14,38 @@ import FrameWeatherAPP.MyPanel;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("So lindu");
-		WeatherAPIClient entroncamento = new WeatherAPIClient("275499");
-		System.out.println("Me deus");
-		CurrentWeather currentWeather = entroncamento.getCurrentConditions();
-		
-		
-		
-		String strTemp = "";
-		if (currentWeather != null) {
-			Double temperature = currentWeather.getTemperature().getMetric().getValue();
-			strTemp = temperature.toString();
-			
-			
-            System.out.println("Weather Text: " + currentWeather.getWeatherText());
-            System.out.println("Temperature: " + currentWeather.getTemperature().getMetric().getValue() + " " +
-                    							currentWeather.getTemperature().getMetric().getUnit());
-            System.out.println("Link: " + currentWeather.getLink());
-            // Access other fields as needed
-        } else {
-            System.out.println("Failed to retrieve Current Weather data.");
-        }
+		final String location_code = "";
 		
 		//CREATED PANELS
         MyPanel topPanel = new MyPanel(0,0,600,50);
         topPanel.setBorder(true);
-        for(MyButton button: MyButton.getButtonList()) {
+        for(final MyButton button: MyButton.getButtonList()) {
+            button.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    String location_code;
+					// Update location_ID based on the clicked button
+                    if (button.getText().equals("Entroncamento")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Lisboa")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Kyoto")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Tomar")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Algarve")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Toronto")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Rio De Janeiro")) {
+                        location_code = "24566";
+                    } else if (button.getText().equals("Almada")) {
+                        location_code = "24566";
+                    }
+                    else {
+                    	System.out.println("Someone fucked up");
+                    }
+                }
+            });
         	topPanel.add(button);
         }
         
@@ -51,6 +59,20 @@ public class Main {
         };
         for (MenuLabel label : labels) {
             midPanel.add(label);
+        }
+        
+		
+		
+		WeatherAPIClient location_ID = new WeatherAPIClient(location_code);
+		CurrentWeather currentWeather = location_ID.getCurrentConditions();
+		
+		
+		
+		String strTemp = "";
+		if (currentWeather != null) {
+
+        } else {
+            System.out.println("Failed to retrieve Current Weather data.");
         }
         
         

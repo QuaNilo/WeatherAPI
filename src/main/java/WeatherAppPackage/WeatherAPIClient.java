@@ -15,7 +15,16 @@ public class WeatherAPIClient {
 	private  final String locationKey;
 	
 	WeatherAPIClient(String locationKey){
-		this.locationKey = locationKey;
+		if(locationKey == null || locationKey == "") {
+			this.locationKey = "24566";
+		}
+		else {
+			this.locationKey = locationKey;			
+		}
+	}
+	
+	WeatherAPIClient(){
+		this.locationKey = "24566";
 	}
 	
 	public CurrentWeather getCurrentConditions() throws IOException {
