@@ -8,9 +8,14 @@ import javax.swing.JPanel;
 
 public class MyPanel extends JPanel{
 	
-	MyPanel(Integer PositionX, Integer PositionY, Integer DimensionX, Integer DimensionY){
+	public MyPanel(Integer PositionX, Integer PositionY, Integer DimensionX, Integer DimensionY){
 		this.setBounds(PositionX,PositionY,DimensionX,DimensionY);
-        this.setBorder(BorderFactory.createLineBorder(Color.black, 2)); // Add a black line border with thickness 2		
+	}
+	
+	public void setBorder(boolean border) {
+		if(border) {
+			this.setBorder(BorderFactory.createLineBorder(Color.black, 2)); // Add a black line border with thickness 2		
+		}
 	}
 	
 	

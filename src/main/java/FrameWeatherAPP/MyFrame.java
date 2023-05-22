@@ -6,12 +6,13 @@ import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame{
 	
-	MyFrame(){
+	public MyFrame(){
 		this.setTitle("WeatherAPI Program");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.setSize(600,600);
 		this.setVisible(true);
+		this.setLayout(null);
 		
 	}
 	
