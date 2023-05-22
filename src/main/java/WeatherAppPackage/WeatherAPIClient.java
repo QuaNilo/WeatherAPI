@@ -12,20 +12,12 @@ public class WeatherAPIClient {
 	
 	private  final String API_KEY = "JAPa5Y8MFzO4M3mGsli4eckspSySNKNH";
 	private  final String currentConditionsEndPoint = "http://dataservice.accuweather.com/currentconditions/v1/{LOCATION_KEY}?apikey=" + API_KEY;
-	private  final String locationKey;
+	public  String locationKey;
 	
 	WeatherAPIClient(String locationKey){
-		if(locationKey == null || locationKey == "") {
-			this.locationKey = "24566";
-		}
-		else {
-			this.locationKey = locationKey;			
-		}
+		this.locationKey = locationKey;			
 	}
 	
-	WeatherAPIClient(){
-		this.locationKey = "24566";
-	}
 	
 	public CurrentWeather getCurrentConditions() throws IOException {
 		CurrentWeather weatherdata = null;

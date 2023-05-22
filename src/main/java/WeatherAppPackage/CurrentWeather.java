@@ -56,61 +56,66 @@ public class CurrentWeather {
     
 }
     
-    class TemperatureData {
-    	  // Getters and setters for the fields
-        // ...
-        public MetricData getMetric() {
-			return metric;
-		}
-		public ImperialData getImperial() {
-			return imperial;
-		}
-		@JsonProperty("Metric")
-		private MetricData metric;
-		@JsonProperty("Imperial")
-        private ImperialData imperial;
-        
-        
-    }
+class TemperatureData {
+	  // Getters and setters for the fields
+// ...
+public MetricData getMetric() {
+		return metric;
+	}
+	public ImperialData getImperial() {
+		return imperial;
+	}
+	@JsonProperty("Metric")
+	private MetricData metric;
+	@JsonProperty("Imperial")
+private ImperialData imperial;
 
-    class MetricData {
-        public double getValue() {
-			return value;
-		}
-		public String getUnit() {
-			return unit;
-		}
-		public int getUnitType() {
-			return unitType;
-		}
-		@JsonProperty("Value")
-		private double value;
-		@JsonProperty("Unit")
-        private String unit;
-		@JsonProperty("UnitType")
-        private int unitType;
-        
-        // Getters and setters for the fields
-        // ...
-    }
 
-    class ImperialData {
-        public double getValue() {
-			return value;
-		}
-		public String getUnit() {
-			return unit;
-		}
-		public int getUnitType() {
-			return unitType;
-		}
-		@JsonProperty("Value")
-		private double value;
-		@JsonProperty("Unit")
-        private String unit;
-		@JsonProperty("UnitType")
-        private int unitType;
-        
-        // Getters and setters for the fields
-        // ...
-    }
+}
+
+class MetricData {
+    public double getValue() {
+		return value;
+	}
+	public String getUnit() {
+		return unit;
+	}
+	public int getUnitType() {
+		return unitType;
+	}
+	@JsonProperty("Value")
+	private double value;
+	@JsonProperty("Unit")
+    private String unit;
+	@JsonProperty("UnitType")
+    private int unitType;
+    
+    // Getters and setters for the fields
+    // ...
+}
+
+class ImperialData {
+    public double getValue() {
+		return value;
+	}
+	public String getUnit() {
+		return unit;
+	}
+	public int getUnitType() {
+		return unitType;
+	}
+	@JsonProperty("Value")
+	private double value;
+	@JsonProperty("Unit")
+    private String unit;
+	@JsonProperty("UnitType")
+    private int unitType;
+    
+    // Getters and setters for the fields
+    // ...
+}
+
+
+
+
+

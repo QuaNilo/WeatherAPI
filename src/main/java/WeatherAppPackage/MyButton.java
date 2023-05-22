@@ -1,4 +1,4 @@
-package FrameWeatherAPP;
+package WeatherAppPackage;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -14,7 +14,8 @@ public class MyButton extends JButton{
 	        new MyButton("Toronto"),
 	        new MyButton("Rio De Janeiro"),
 	        new MyButton("Almada"),
-	        new MyButton("Kyoto")
+	        new MyButton("Kyoto"),
+	        new MyButton("QUIT")
 	};
 	
 	public static MyButton[] getButtonList() {

@@ -1,4 +1,4 @@
-package FrameWeatherAPP;
+package WeatherAppPackage;
 
 import javax.swing.JLabel;
 

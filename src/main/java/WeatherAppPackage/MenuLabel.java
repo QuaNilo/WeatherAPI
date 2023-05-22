@@ -1,4 +1,4 @@
-package FrameWeatherAPP;
+package WeatherAppPackage;
 
 import java.awt.Dimension;
 import java.awt.Font;

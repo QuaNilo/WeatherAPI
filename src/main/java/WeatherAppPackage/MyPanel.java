@@ -1,4 +1,4 @@
-package FrameWeatherAPP;
+package WeatherAppPackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
