@@ -49,7 +49,9 @@ public class WeatherAPIClient {
 		return weatherdata;
 		}
 
-	
+	public Forecast1DayWeather getForecast1day() {
+		return null;
+	}
 	
 	}
 

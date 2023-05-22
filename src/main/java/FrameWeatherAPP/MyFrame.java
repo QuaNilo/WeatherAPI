@@ -9,7 +9,7 @@ public class MyFrame extends JFrame{
 	MyFrame(){
 		this.setTitle("WeatherAPI Program");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setResizable(false);
+		this.setResizable(true);
 		this.setSize(600,600);
 		this.setVisible(true);
 		
