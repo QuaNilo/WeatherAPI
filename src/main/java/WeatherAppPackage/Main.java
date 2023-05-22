@@ -8,16 +8,16 @@ public class Main {
 		System.out.println("So lindu");
 		WeatherAPIClient entroncamento = new WeatherAPIClient("275499");
 		System.out.println("Me deus");
-		WeatherData weatherdata = entroncamento.getAPI();
+		CurrentWeather currentWeather = entroncamento.getCurrentConditions();
 		
-		if (weatherdata != null) {
-            System.out.println("Weather Text: " + weatherdata.getWeatherText());
-            System.out.println("Temperature: " + weatherdata.getTemperature().getMetric().getValue() + " " +
-                    weatherdata.getTemperature().getMetric().getUnit());
-            System.out.println("Link: " + weatherdata.getLink());
+		if (currentWeather != null) {
+            System.out.println("Weather Text: " + currentWeather.getWeatherText());
+            System.out.println("Temperature: " + currentWeather.getTemperature().getMetric().getValue() + " " +
+                    currentWeather.getTemperature().getMetric().getUnit());
+            System.out.println("Link: " + currentWeather.getLink());
             // Access other fields as needed
         } else {
-            System.out.println("Failed to retrieve weather data.");
+            System.out.println("Failed to retrieve Current Weather data.");
         }
     }
 		

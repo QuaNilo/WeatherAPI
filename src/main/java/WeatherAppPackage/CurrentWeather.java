@@ -2,7 +2,7 @@ package WeatherAppPackage;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class WeatherData {
+public class CurrentWeather {
     public String getLocalObservationDateTime() {
 		return localObservationDateTime;
 	}
