@@ -41,7 +41,7 @@ public class WeatherAPIClient {
 	                weatherdata = weatherDataArray[0];
 	            }
 			}else {
-				System.out.println("Oops");
+				System.out.println("Failed to connect to URL");
 			}
 			}
 			catch(IOException e){
