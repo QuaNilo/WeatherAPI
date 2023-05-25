@@ -49,6 +49,9 @@ public class Main {
                     } else if (button.getText().equals("Almada")) {
                      	location_ID.setLocationKey("275589");
                     }
+                	else if (button.getText().equals("Kyoto")) {
+                		location_ID.setLocationKey("226396");
+                	}
                     else {
                     	System.out.println("Someone fucked up");
                     }
